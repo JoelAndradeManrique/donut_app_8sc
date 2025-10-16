@@ -1,3 +1,8 @@
+import 'package:donut_app_8sc/tab/burger_tab.dart';
+import 'package:donut_app_8sc/tab/donut_tab.dart';
+import 'package:donut_app_8sc/tab/pancakes_tab.dart';
+import 'package:donut_app_8sc/tab/pizza_tab.dart';
+import 'package:donut_app_8sc/tab/smoothies_tab.dart';
 import 'package:donut_app_8sc/utils/my_tab.dart';
 import 'package:flutter/material.dart';
 
@@ -57,9 +62,32 @@ class _HomePageState extends State<HomePage> {
             ),
 
             //2. pestañas (TabBar)
-            TabBar(tabs: myTabs),
+            TabBar(
+              // Esta es la parte que añade el borde
+              indicator: BoxDecoration(
+                border: Border.all(
+                  color: Colors.black,
+                  width: 2,
+                ), // Borde negro de 2px de grosor
+                borderRadius: BorderRadius.circular(12), // Bordes redondeados
+              ),
+              indicatorSize: TabBarIndicatorSize
+                  .tab, // Asegura que el borde rodee toda la pestaña
+              tabs: myTabs,
+            ),
 
             //3. Contenido de pestañas (TabBarView)
+            Expanded(
+              child: TabBarView(
+                children: [
+                  DonutTab(),
+                  BurgerTab(),
+                  SmoothiesTab(),
+                  PancakesTab(),
+                  PizzaTab(),
+                ],
+              ),
+            ),
 
             //4. Carrito (Cart)
           ],
