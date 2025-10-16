@@ -67,23 +67,26 @@ class DonutTile extends StatelessWidget {
             //tienda de la dona
             Text(donutProvider, style: TextStyle(color: Colors.grey[600])),
             //boton de agregar
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                //favorito
-                Icon(Icons.favorite, color: Colors.pink[300]),
-                //agregar
-                TextButton(
-                  onPressed: () {},
-                  child: Text(
-                    'ADD',
-                    style: TextStyle(
-                      fontWeight: FontWeight.bold,
-                      decoration: TextDecoration.underline,
+            Padding(
+              padding: const EdgeInsets.all(30.0),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  //favorito
+                  Icon(Icons.favorite, color: Colors.pink[300]),
+                  //agregar
+                  TextButton(
+                    onPressed: () {},
+                    child: Text(
+                      'ADD',
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        decoration: TextDecoration.underline,
+                      ),
                     ),
                   ),
-                ),
-              ],
+                ],
+              ),
             ),
           ],
         ),

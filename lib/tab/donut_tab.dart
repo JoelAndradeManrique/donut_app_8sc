@@ -12,7 +12,7 @@ class DonutTab extends StatelessWidget {
       '100.00',
       Colors.brown,
       'lib/images/Chocolate_donut.png',
-      'starbucks',
+      'Starbucks',
     ],
     [
       'Strawberry',
