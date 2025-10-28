@@ -42,7 +42,7 @@ class DonutTab extends StatelessWidget {
       gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
         //numero de columnas
         crossAxisCount: 2,
-        childAspectRatio: 1 / 1.4,
+        childAspectRatio: 1 / 1.6,
       ),
       itemCount: donutOnSale.length,
       //lo que se va a construir en cada celda
